@@ -1,4 +1,5 @@
 import React from "react";
+import { fetchWeather } from "./../actions"
 import { connect } from "react-redux";
 
 class WeatherLocation extends React.Component {
@@ -14,6 +15,7 @@ class WeatherLocation extends React.Component {
       return;
     }
     console.log(_searchCity.value);
+    this.props.dispatch(fetchWeather(_searchCity.value.trim()));
   }
 
   render () {

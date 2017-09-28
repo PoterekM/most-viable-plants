@@ -1,0 +1,2 @@
+export const REQUEST_WEATHER = "REQUEST_WEATHER";
+export const SHOW_WEATHER = "SHOW_WEATHER";
