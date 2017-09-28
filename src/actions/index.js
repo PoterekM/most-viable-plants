@@ -44,7 +44,7 @@ export function fetchWeather(searchCity) {
         console.log("HEY");
         console.log(weather);
         console.log(searchCity);
-        dispatch(showWeather(weather));
+        dispatch(showWeather(weather, searchCity));
       } else {
         dispatch(showWeather("Sorry, we can't process that"));
       }

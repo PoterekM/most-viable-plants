@@ -20,11 +20,11 @@ export default (state = defaultState, action) => {
 
     case types.SHOW_WEATHER:
     weather = state[action.weather];
-    searchCity = state[action.searchCity]
+    searchCity = state[searchCity]
     newWeather = Object.assign({}, weather, {
       isFetching: false,
       weather: action.weather,
-      searchCity: action.searchCity
+      searchCity: searchCity
     });
       return newWeather;
     default:
