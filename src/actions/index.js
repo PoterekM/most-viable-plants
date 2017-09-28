@@ -39,10 +39,12 @@ export function fetchWeather(searchCity) {
       // console.log(json.list);
       console.log(json);
       if (json.list.length > 0) {
+
         const weather = json.list[0].main.temp;
         console.log("HEY");
         console.log(weather);
-        dispatch(showWeather("Your result for " + searchCity + " is " + weather + " degrees Fahrenheight"));
+        console.log(searchCity);
+        dispatch(showWeather(weather));
       } else {
         dispatch(showWeather("Sorry, we can't process that"));
       }
