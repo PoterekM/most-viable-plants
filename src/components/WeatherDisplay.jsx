@@ -6,6 +6,7 @@ const WeatherDisplay = ({ dispatch, weather }) => {
   return (
     <div>
       <h1>Here's where the weather will be displayed!</h1>
+      <h1>{weather.weather}</h1>
     </div>
   )
 }
