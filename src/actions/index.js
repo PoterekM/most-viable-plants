@@ -44,7 +44,10 @@ export function fetchWeather(searchCity) {
         console.log("HEY");
         console.log(weather);
         console.log(searchCity);
-        dispatch(showWeather(weather, searchCity));
+        if (weather > 90) {
+          alert("You should consider watering your plants tomorrow!")
+        }
+        dispatch(showWeather("The weather in " + searchCity + " is " + weather));
       } else {
         dispatch(showWeather("Sorry, we can't process that"));
       }
