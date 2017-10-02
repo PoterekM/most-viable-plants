@@ -5,10 +5,12 @@ export const requestWeather = (searchCity) => ({
   searchCity
 });
 
-export const showWeather = (todayWeatherMin, todayWeatherMax) => ({
+export const showWeather = (todayWeatherMin, todayWeatherMax, tomorrowWeatherMin, tomorrowWeatherMax) => ({
   type: types.SHOW_WEATHER,
   todayWeatherMin,
-  todayWeatherMax
+  todayWeatherMax,
+  tomorrowWeatherMin,
+  tomorrowWeatherMax,
 });
 
 export function fetchWeather(searchCity) {
@@ -27,10 +29,12 @@ export function fetchWeather(searchCity) {
       if (json.list.length > 0) {
         const todayWeatherMin = json.list[0].temp.min;
         const todayWeatherMax = json.list[0].temp.max;
+        const tomorrowWeatherMin = json.list[1].temp.min;
+        const tomorrowWeatherMax = json.list[1].temp.max;
         console.log(todayWeatherMax);
         console.log(todayWeatherMin);
         console.log(searchCity);
-        dispatch(showWeather(todayWeatherMin, todayWeatherMax));
+        dispatch(showWeather(todayWeatherMin, todayWeatherMax, tomorrowWeatherMin, tomorrowWeatherMax));
       } else {
         dispatch(showWeather("Sorry, we can't process that"));
       }

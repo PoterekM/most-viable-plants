@@ -3,5 +3,7 @@ export const defaultState = {
   weather: "Let's get your weather!",
   searchCity: "city",
   todayWeatherMin: "unknown low!",
-  todayWeatherMax: "unknown high!"
+  todayWeatherMax: "unknown high!",
+  tomorrowWeatherMin: "unknown low!",
+  tomorrowWeatherMax: "unknown high!",
 }

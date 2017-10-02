@@ -13,8 +13,11 @@ const WeatherDisplay = ({ dispatch, weather }) => {
   return (
     <div>
       <h1>The high temperature for {weather.searchCity.searchCity} today is {weather.todayWeatherMax} with a low of {weather.todayWeatherMin}</h1>
+    <hr/>
+  <h1>Tomorrow</h1>
+The high temperature for {weather.searchCity.searchCity} today is {weather.tomorrowWeatherMax} with a low of {weather.tomorrowWeatherMin}
 
-      <hr/><hr/><hr/><hr/>
+      <hr/><hr/><hr/>
       <h1>{weather.weather}</h1>
       <h2>{weather.searchCity.searchCity}</h2>
     </div>
