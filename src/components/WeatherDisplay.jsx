@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const WeatherDisplay = ({ dispatch, weather, todayWeatherMin }) => {
+const WeatherDisplay = ({ dispatch, weather }) => {
   console.log(weather);
   return (
     <div>
@@ -17,12 +17,9 @@ const WeatherDisplay = ({ dispatch, weather, todayWeatherMin }) => {
 const mapStateToProps = state => {
   console.log(state);
   const weather = state;
-  const searchCity = state;
-  const todayWeatherMin = state;
+
   return {
     weather: weather,
-    searchCity: searchCity,
-    todayWeatherMin: todayWeatherMin
   };
 };
 

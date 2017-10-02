@@ -6,6 +6,7 @@ export default (state = defaultState, action) => {
   let requestWeather;
   let newWeather;
   let todayWeatherMin;
+  let todayWeatherMax;
   let searchCity;
   let weather;
   switch (action.type) {
@@ -20,13 +21,15 @@ export default (state = defaultState, action) => {
     return newState;
 
     case types.SHOW_WEATHER:
-    todayWeatherMin = state[weather];
+    todayWeatherMin = state[todayWeatherMin];
+    todayWeatherMax = state[todayWeatherMax];
     searchCity = state[searchCity];
     newWeather = Object.assign({}, weather, {
       isFetching: false,
       weather: action.weather,
       searchCity: searchCity,
-      todayWeatherMin: action.todayWeatherMin
+      todayWeatherMin: action.todayWeatherMin,
+      todayWeatherMax: action.todayWeatherMax
     });
       return newWeather;
     default:

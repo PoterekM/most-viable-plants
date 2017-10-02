@@ -5,10 +5,10 @@ export const requestWeather = (searchCity) => ({
   searchCity
 });
 
-export const showWeather = (weather, todayWeatherMin) => ({
+export const showWeather = (todayWeatherMin, todayWeatherMax) => ({
   type: types.SHOW_WEATHER,
-  weather,
-  todayWeatherMin
+  todayWeatherMin,
+  todayWeatherMax
 });
 
 export function fetchWeather(searchCity) {
@@ -38,7 +38,7 @@ export function fetchWeather(searchCity) {
             alert("you should consider covering your plants tomorrow!")
           }
 
-        dispatch(showWeather(todayWeatherMax, todayWeatherMin,));
+        dispatch(showWeather(todayWeatherMin, todayWeatherMax));
       } else {
         dispatch(showWeather("Sorry, we can't process that"));
       }
