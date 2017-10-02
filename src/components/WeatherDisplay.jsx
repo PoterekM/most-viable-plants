@@ -1,8 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
 
+
+
 const WeatherDisplay = ({ dispatch, weather }) => {
-  console.log(weather);
+  if ((weather.todayWeatherMax) > 90) {
+    alert("yaowza! Ya gotta watter your plants!");
+  } else if ((weather.todayWeatherMin) < 32) {
+    alert("Booooo!!");
+  }
+
   return (
     <div>
       <h1>The high temperature for {weather.searchCity.searchCity} today is {weather.todayWeatherMax} with a low of {weather.todayWeatherMin}</h1>

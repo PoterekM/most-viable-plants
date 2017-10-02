@@ -30,14 +30,6 @@ export function fetchWeather(searchCity) {
         console.log(todayWeatherMax);
         console.log(todayWeatherMin);
         console.log(searchCity);
-        if (todayWeatherMax >= 100) {
-          alert("You should consider watering your plants tomorrow!")
-        } else if (20 > todayWeatherMin)
-        console.log(todayWeatherMin);
-          {
-            alert("you should consider covering your plants tomorrow!")
-          }
-
         dispatch(showWeather(todayWeatherMin, todayWeatherMax));
       } else {
         dispatch(showWeather("Sorry, we can't process that"));
