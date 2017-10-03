@@ -7,6 +7,13 @@ import Thumb from "./../images/thumbs.png"
 import {Container, Row, Col} from "react-grid-system";
 
 const WeatherDisplay = ({ dispatch, weather }) => {
+  var imageStyle = {
+    width: 150,
+    height: 150,
+  }
+
+
+
   let formAreaContent;
   let pic;
   let picTomorrow;
@@ -19,7 +26,7 @@ const WeatherDisplay = ({ dispatch, weather }) => {
     pic = Thumb;
   }
 
-  if ((weather.tomorrowWeatherMin) < 32) {
+  if ((weather.tomorrowWeatherMin) < 40) {
     picTomorrow = Cover;
   } else if ((weather.tomorrowWeatherMax) > 70){
     picTomorrow = Water;
@@ -42,13 +49,13 @@ const WeatherDisplay = ({ dispatch, weather }) => {
             <h1>Today's forecast:</h1>
             <h3>{weather.todayWeatherMax}</h3>
             <h3>{weather.todayWeatherMin}</h3>
-            <img src={pic}></img>
+            <img style={imageStyle} src={pic}></img>
           </Col>
           <Col sm={6}>
             <h1>Tomorrow</h1>
             <h3>{weather.tomorrowWeatherMax}</h3>
             <h3>{weather.tomorrowWeatherMin}</h3>
-            <img src={picTomorrow}></img>
+            <img style={imageStyle} src={picTomorrow}></img>
           </Col>
         </Row>
       </Container>
