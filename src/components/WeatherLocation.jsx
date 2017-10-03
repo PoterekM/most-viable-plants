@@ -31,4 +31,4 @@ class WeatherLocation extends React.Component {
     )
   }
 }
-export default connect()(WeatherLocation)
+export default connect()(WeatherLocation);

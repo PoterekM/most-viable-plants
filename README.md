@@ -36,7 +36,7 @@ In Terminal,
 * Tuesday/Wednesday add form from user. have data be persistent.
 * Wednesday have moment since watered working.
 * Wednesday/Thursday design application.
-
+* for scaleability it might be wise to make a for loop to display temperature info. It would be a bit verbose to have 3-10 day forecast and have to set the image parameter for each one.
 ## Development Planning
 * Build application as presentational components initially.
 * Display API information of high and low to the user.
