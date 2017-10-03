@@ -11,8 +11,6 @@ class PlantCreation extends React.Component {
     event.preventDefault();
     let { _plantName, _plantType, _waterSchedule } = this.refs;
     console.log(_plantName.value);
-    console.log(_plantType.value);
-    console.log(_waterSchedule.value);
   }
 
   render() {
