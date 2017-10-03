@@ -14,6 +14,7 @@ class WeatherLocation extends React.Component {
     if (!_searchCity.value.trim()) {
       return;
     }
+    _searchCity.value = ("");
     console.log(_searchCity.value);
     this.props.dispatch(fetchWeather(_searchCity.value.trim()));
   }
@@ -22,7 +23,7 @@ class WeatherLocation extends React.Component {
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input placeholder="Search weather by city!"
+          <input placeholder="City, State"
             ref="_searchCity">
           </input>
           <button>Search</button>

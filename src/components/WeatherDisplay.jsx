@@ -5,9 +5,10 @@ import { connect } from "react-redux";
 
 const WeatherDisplay = ({ dispatch, weather }) => {
   let formAreaContent;
+
   if ((weather.todayWeatherMax) > 90) {
     alert("yaowza! Ya gotta watter your plants!");
-  } else if ((weather.todayWeatherMin) < 32) {
+  } else if ((weather.todayWeatherMin || weather.tomorrowWeatherMin) <= 40) {
     alert("Booooo!!");
   }
 
@@ -16,6 +17,7 @@ const WeatherDisplay = ({ dispatch, weather }) => {
     formAreaContent =
       <div>
       </div>
+
   } else {
     formAreaContent =
     <div>
@@ -39,11 +41,9 @@ const WeatherDisplay = ({ dispatch, weather }) => {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   const weather = state;
-
   return {
-    weather: weather,
+    weather: state,
   };
 };
 
