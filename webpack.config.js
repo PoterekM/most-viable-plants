@@ -61,7 +61,18 @@ module.exports = {
      {
        test: resolve(__dirname, "src/styles/styles.css"),
        loader: 'css-loader'
-     }
+     },
+     {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      }
     ]
   },
 
@@ -71,7 +82,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'Mars',
+      title: 'Most-Viable-Plants',
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]

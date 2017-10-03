@@ -1,5 +1,5 @@
 {
-  "name": "Mars",
+  "name": "Most Viable Plants",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -35,6 +35,8 @@
     "react-hot-loader": "^3.0.0-beta.7",
     "style-loader": "^0.18.2",
     "webpack": "^2.6.0",
-    "webpack-dev-server": "^2.5.0"
+    "webpack-dev-server": "^2.5.0",
+    "url-loader": "^0.5.9",
+    "file-loader": "^0.11.2"
   }
 }
