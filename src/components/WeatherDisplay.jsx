@@ -12,8 +12,6 @@ const WeatherDisplay = ({ dispatch, weather }) => {
     height: 150,
   }
 
-
-
   let formAreaContent;
   let pic;
   let picTomorrow;
@@ -26,7 +24,7 @@ const WeatherDisplay = ({ dispatch, weather }) => {
     pic = Thumb;
   }
 
-  if ((weather.tomorrowWeatherMin) < 40) {
+  if ((weather.tomorrowWeatherMin) < 32) {
     picTomorrow = Cover;
   } else if ((weather.tomorrowWeatherMax) > 70){
     picTomorrow = Water;
