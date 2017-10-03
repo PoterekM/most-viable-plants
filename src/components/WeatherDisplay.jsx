@@ -1,19 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
 import WeatherLocation from "./WeatherLocation";
+import {Container, Row, Col} from "react-grid-system";
 
 
 const WeatherDisplay = ({ dispatch, weather }) => {
   let formAreaContent;
 
-  if ((weather.todayWeatherMax || weather.todayWeatherMin) > 67) {
+  if ((weather.todayWeatherMax || weather.todayWeatherMin) > 90) {
     alert("yaowza! Ya gotta watter your plants!");
   } else if ((weather.todayWeatherMin || weather.tomorrowWeatherMin) <= 44) {
     alert("Booooo!!");
   }
 
-  if ((weather.todayWeatherMax) === "unknown high!"){
-    console.log("yaaa");
+  if ((weather.searchCity) === "no entry from user"){
     formAreaContent =
       <div>
         <WeatherLocation/>
@@ -22,10 +22,20 @@ const WeatherDisplay = ({ dispatch, weather }) => {
   } else {
     formAreaContent =
     <div>
-      <h1>The high temperature for {weather.searchCity.searchCity} today is {weather.todayWeatherMax} with a low of {weather.todayWeatherMin}</h1>
+      <Container>
+        <Row>
+          <Col sm={6}>
+            <h1>The high temperature for {weather.searchCity.searchCity} today is {weather.todayWeatherMax} with a low of {weather.todayWeatherMin}</h1>
+
+          </Col>
+          <Col sm={6}>
+            <h1>Tomorrow</h1>
+            The high temperature for {weather.searchCity.searchCity} today is {weather.tomorrowWeatherMax} with a low of {weather.tomorrowWeatherMin}
+
+          </Col>
+        </Row>
+      </Container>
       <hr/>
-      <h1>Tomorrow</h1>
-      The high temperature for {weather.searchCity.searchCity} today is {weather.tomorrowWeatherMax} with a low of {weather.tomorrowWeatherMin}
 
       <hr/><hr/><hr/>
       <h1>{weather.weather}</h1>

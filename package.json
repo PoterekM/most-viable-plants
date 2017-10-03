@@ -15,6 +15,7 @@
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.3",
     "react-dom": "^15.5.4",
+    "react-grid-system": "^2.9.6",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.0.0",
     "redux": "^3.7.2",

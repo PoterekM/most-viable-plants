@@ -1,7 +1,7 @@
 export const defaultState = {
   isFetching: false,
   weather: "Let's get your weather!",
-  searchCity: "city",
+  searchCity: "no entry from user",
   todayWeatherMin: "unknown low!",
   todayWeatherMax: "unknown high!",
   tomorrowWeatherMin: "unknown low!",
