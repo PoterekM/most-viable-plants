@@ -33,6 +33,8 @@ export function fetchWeather(searchCity) {
         const tomorrowWeatherMax = json.list[1].temp.max;
         console.log(todayWeatherMax);
         console.log(todayWeatherMin);
+        console.log(tomorrowWeatherMax);
+        console.log(tomorrowWeatherMin);
         console.log(searchCity);
         dispatch(showWeather(todayWeatherMin, todayWeatherMax, tomorrowWeatherMin, tomorrowWeatherMax));
       } else {
