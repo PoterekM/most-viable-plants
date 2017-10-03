@@ -33,6 +33,9 @@ In Terminal,
 
 ## To Do list
 * Clean up response from API and remove decimal points.
+* Tuesday/Wednesday add form from user. have data be persistent.
+* Wednesday have moment since watered working.
+* Wednesday/Thursday design application.
 
 ## Development Planning
 * Build application as presentational components initially.
