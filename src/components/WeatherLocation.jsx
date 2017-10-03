@@ -14,9 +14,8 @@ class WeatherLocation extends React.Component {
     if (!_searchCity.value.trim()) {
       return;
     }
-    _searchCity.value = ("");
-    console.log(_searchCity.value);
     this.props.dispatch(fetchWeather(_searchCity.value.trim()));
+    _searchCity.value = ("");
   }
 
   render () {

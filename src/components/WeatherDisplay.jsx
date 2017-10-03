@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import WeatherLocation from "./WeatherLocation";
 
 
 const WeatherDisplay = ({ dispatch, weather }) => {
   let formAreaContent;
 
-  if ((weather.todayWeatherMax) > 90) {
+  if ((weather.todayWeatherMax || weather.todayWeatherMin) > 67) {
     alert("yaowza! Ya gotta watter your plants!");
-  } else if ((weather.todayWeatherMin || weather.tomorrowWeatherMin) <= 40) {
+  } else if ((weather.todayWeatherMin || weather.tomorrowWeatherMin) <= 44) {
     alert("Booooo!!");
   }
 
@@ -16,6 +16,7 @@ const WeatherDisplay = ({ dispatch, weather }) => {
     console.log("yaaa");
     formAreaContent =
       <div>
+        <WeatherLocation/>
       </div>
 
   } else {
