@@ -17,9 +17,9 @@ In Terminal,
 * In your browser,
   * Visit the app at http://localhost:8080.
 
-## User Story
+## MVP User Story
 * A user should be able to go to the website and see the high and low for today and tomorrow with symbols on page according to temperature.
-* A user should be able to fill out a form and save the information to firebase.
+* A user should be able to fill out a form as to what the plant name is, plant type, and how often it should be watered.
 
 
 ### Wishlist
@@ -36,10 +36,11 @@ In Terminal,
 
 ## Development Planning
 * Build application as presentational components initially.
-* Display API information for my profile to the user.
-* Create Jest Tests.
-  * Check in and see how the user story is running and ensure proper user-flow.
-* Style Application.
+* Display API information of high and low to the user.
+* Add alert for if it should be watered or not.
+* Build form for input.
+* Add firebase.
+* Adjust click functionality for moment since watered for component.
 
 ## Program Preview
 ![Preview of application](./src/images/Project.png)
