@@ -13,6 +13,13 @@ export const showWeather = (todayWeatherMin, todayWeatherMax, tomorrowWeatherMin
   tomorrowWeatherMax,
 });
 
+export const addPlant = (plantName, plantType, waterSchedule) => ({
+  type: types.ADD_PLANT,
+  plantName,
+  plantType,
+  waterSchedule
+});
+
 export function fetchWeather(searchCity) {
   console.log(searchCity);
   return function (dispatch) {

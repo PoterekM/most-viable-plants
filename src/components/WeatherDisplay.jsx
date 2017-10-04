@@ -18,13 +18,13 @@ const WeatherDisplay = ({ dispatch, weather }) => {
 
   if ((weather.todayWeatherMin) < 32) {
     pic = Cover;
-  } else if ((weather.todayWeatherMax) > 70){
+  } else if ((weather.todayWeatherMax) > 68){
     pic = Water;
   } else {
     pic = Thumb;
   }
 
-  if ((weather.tomorrowWeatherMin) < 32) {
+  if ((weather.tomorrowWeatherMin) < 40) {
     picTomorrow = Cover;
   } else if ((weather.tomorrowWeatherMax) > 70){
     picTomorrow = Water;

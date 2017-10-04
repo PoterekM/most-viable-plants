@@ -38,6 +38,22 @@ export default (state = defaultState, action) => {
       tomorrowWeatherMax: action.tomorrowWeatherMax
     });
       return newWeather;
+
+      case types.ADD_PLANT:
+      let newPlant;
+      let plantName;
+      let plantType;
+      let waterSchedule;
+      let plant;
+      plantName = state[plantName];
+      plantType = state[plantType];
+      waterSchedule = state[waterSchedule];
+      newPlant= Object.assign({}, plant, {
+        plantName: action.plantName,
+        plantType: action.plantType,
+        waterSchedule: action.waterSchedule,
+      });
+        return newPlant;
     default:
     return state;
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import { addPlant } from "./../actions"
 import { connect } from "react-redux";
 
 class PlantCreation extends React.Component {
@@ -11,6 +12,7 @@ class PlantCreation extends React.Component {
     event.preventDefault();
     let { _plantName, _plantType, _waterSchedule } = this.refs;
     console.log(_plantName.value);
+    this.props.dispatch(addPlant(_plantName.value, _plantType.value, _waterSchedule.value))
   }
 
   render() {
