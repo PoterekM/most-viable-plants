@@ -3,10 +3,9 @@ import { connect } from "react-redux";
 
 
 
-
-const PlantList = ({ dispatch, plant }) => {
-  console.log(plant);
-  console.log(plantName);
+const PlantList = (props) => {
+  const { dispatch, plant } = props;
+  console.log(props);
   let plantName;
   let plantType;
   let waterSchedule;

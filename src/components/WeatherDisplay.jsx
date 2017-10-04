@@ -6,7 +6,10 @@ import Water from "./../images/wateringCan.gif"
 import Thumb from "./../images/thumbs.png"
 import {Container, Row, Col} from "react-grid-system";
 
-const WeatherDisplay = ({ dispatch, weather, searchCity }) => {
+const WeatherDisplay = (props) => {
+  const { dispatch, weather, searchCity } = props;
+
+  console.log(props);
   var imageStyle = {
     width: 150,
     height: 150,
@@ -72,11 +75,12 @@ const WeatherDisplay = ({ dispatch, weather, searchCity }) => {
 }
 
 const mapStateToProps = state => {
+  console.log(state);
   const searchCity = searchCity;
   const weather = state;
   return {
-    weather: state,
-    searchCity: searchCity,
+    weather: state.weatherList,
+
   };
 };
 
