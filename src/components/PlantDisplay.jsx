@@ -5,6 +5,11 @@ import { connect } from "react-redux";
 
 
 const PlantList = ({ dispatch, plant }) => {
+  console.log(plant);
+  console.log(plantName);
+  let plantName;
+  let plantType;
+  let waterSchedule;
     return (
       <div>
         <h1>Plant Information: </h1>
