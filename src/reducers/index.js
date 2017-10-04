@@ -40,12 +40,24 @@ export default (state = defaultState, action) => {
       return newWeather;
 
       case types.ADD_PLANT:
+      todayWeatherMin = state[todayWeatherMin];
+      todayWeatherMax = state[todayWeatherMax];
+      tomorrowWeatherMin = state[tomorrowWeatherMin];
+      tomorrowWeatherMax = state[tomorrowWeatherMax];
+      searchCity = state[searchCity];
       let plantName;
       let plantType;
       let newPlant;
       let waterSchedule;
       let plant;
       newPlant = {
+        isFetching: false,
+        weather: action.weather,
+        searchCity: action.searchCity,
+        todayWeatherMin: action.todayWeatherMin,
+        todayWeatherMax: action.todayWeatherMax,
+        tomorrowWeatherMin: action.tomorrowWeatherMin,
+        tomorrowWeatherMax: action.tomorrowWeatherMax,
         plantName: action.plantName,
         plantType: action.plantType,
         waterSchedule: action.waterSchedule,
