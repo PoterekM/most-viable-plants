@@ -31,7 +31,7 @@ export default (state = defaultState, action) => {
     newWeather = Object.assign({}, weather, {
       isFetching: false,
       weather: action.weather,
-      searchCity: searchCity,
+      searchCity: action.searchCity,
       todayWeatherMin: action.todayWeatherMin,
       todayWeatherMax: action.todayWeatherMax,
       tomorrowWeatherMin: action.tomorrowWeatherMin,
@@ -60,6 +60,11 @@ export default (state = defaultState, action) => {
       // return [
       //   ...state,
       //   {
+      //     searchCity: searchCity,
+      //     todayWeatherMin: action.todayWeatherMin,
+      //     todayWeatherMax: action.todayWeatherMax,
+      //     tomorrowWeatherMin: action.tomorrowWeatherMin,
+      //     tomorrowWeatherMax: action.tomorrowWeatherMax,
       //     plantName: action.plantName,
       //     plantType: action.plantType,
       //     waterSchedule: action.waterSchedule,

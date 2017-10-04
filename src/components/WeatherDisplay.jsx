@@ -6,7 +6,7 @@ import Water from "./../images/wateringCan.gif"
 import Thumb from "./../images/thumbs.png"
 import {Container, Row, Col} from "react-grid-system";
 
-const WeatherDisplay = ({ dispatch, weather }) => {
+const WeatherDisplay = ({ dispatch, weather, searchCity }) => {
   var imageStyle = {
     width: 150,
     height: 150,
@@ -15,6 +15,8 @@ const WeatherDisplay = ({ dispatch, weather }) => {
   let formAreaContent;
   let pic;
   let picTomorrow;
+
+
 
   if ((weather.todayWeatherMin) < 32) {
     pic = Cover;
@@ -44,6 +46,7 @@ const WeatherDisplay = ({ dispatch, weather }) => {
       <Container>
         <Row>
           <Col sm={6}>
+            {weather.searchCity}
             <h1>Today's forecast:</h1>
             <h3>{weather.todayWeatherMax}</h3>
             <h3>{weather.todayWeatherMin}</h3>
@@ -69,9 +72,11 @@ const WeatherDisplay = ({ dispatch, weather }) => {
 }
 
 const mapStateToProps = state => {
+  const searchCity = searchCity;
   const weather = state;
   return {
     weather: state,
+    searchCity: searchCity,
   };
 };
 

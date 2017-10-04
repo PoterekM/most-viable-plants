@@ -13,9 +13,9 @@ const PlantList = ({ dispatch, plant }) => {
     return (
       <div>
         <h1>Plant Information: </h1>
-      <h4>Name: Philodendron: {plant.plantName}</h4>
-    <h4>type: Indoor {plant.plantType}</h4>
-  <h4>Watering Schedule: every 3 days {plant.waterSchedule}</h4>
+        <h4>Name: Philodendron: {plant.plantName}</h4>
+        <h4>type: Indoor {plant.plantType}</h4>
+        <h4>Watering Schedule: every 3 days {plant.waterSchedule}</h4>
         <button type="submit">water!</button>
       </div>
     );
