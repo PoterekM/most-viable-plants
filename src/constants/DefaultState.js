@@ -6,7 +6,9 @@ export const defaultState = {
   todayWeatherMax: "unknown high!",
   tomorrowWeatherMin: "unknown low!",
   tomorrowWeatherMax: "unknown high!",
-  plantName: "Lilly",
-  plantType: "heartflower",
-  waterSchedule: "everyday"
+
+  plantName: "plant",
+  plantType: "Type",
+  waterSchedule: "often"
+
 }
