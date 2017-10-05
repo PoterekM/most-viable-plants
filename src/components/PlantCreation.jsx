@@ -14,6 +14,9 @@ class PlantCreation extends React.Component {
     let { _plantName, _plantType, _waterSchedule } = this.refs;
     console.log(_plantName.value);
     this.props.dispatch(addPlant(_plantName.value, _plantType.value, _waterSchedule.value))
+    _plantName.value = ("");
+    _plantType.value = ("");
+    _waterSchedule.value = ("");
   }
 
   render() {

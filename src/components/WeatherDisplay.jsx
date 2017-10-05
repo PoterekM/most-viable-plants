@@ -47,10 +47,10 @@ const WeatherDisplay = (props) => {
     formAreaContent =
     <div>
       <Container>
+        <h1>{weatherList.searchCity}</h1>
         <Row>
           <Col sm={6}>
-            {weatherList.searchCity}
-            <h1>Today's forecast:</h1>
+            <h1>Today:</h1>
           <h3>{weatherList.todayWeatherMax}</h3>
         <h3>{weatherList.todayWeatherMin}</h3>
             <img style={imageStyle} src={pic}></img>
@@ -76,7 +76,6 @@ const WeatherDisplay = (props) => {
 
 const mapStateToProps = state => {
   console.log(state);
-  const weather = state;
   return {
     weatherList: state.weatherList,
   };
