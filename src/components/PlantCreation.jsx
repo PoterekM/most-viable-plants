@@ -24,9 +24,9 @@ class PlantCreation extends React.Component {
       <div>
         <button>Add New Plant</button>
         <form onSubmit={this.handleSubmit}>
-          <input placeholder="Plant Name" ref="_plantName"></input>
-          <input placeholder="Plant Type" ref="_plantType"></input>
-          <input placeholder="Water Schedule" ref="_waterSchedule"></input>
+          <input required placeholder="Plant Name" ref="_plantName"></input>
+          <input required placeholder="Plant Type" ref="_plantType"></input>
+          <input required placeholder="Water Schedule" ref="_waterSchedule"></input>
           <button>Submit</button>
         </form>
       </div>

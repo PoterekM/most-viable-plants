@@ -1,13 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import Plant from "./Plant"
-import { v4 } from 'uuid';
-
 
 
 var plantStyle = {
   backgroundColor: "rgba(255, 255, 255, .6)",
-  // textShadow: "1px 1px white",
   color: "black",
 }
 

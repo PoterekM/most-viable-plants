@@ -7,7 +7,7 @@ function Header () {
       <h1>Most Viable Plants</h1>
     </div>
   )
-
+  
 }
 
 export default Header;
