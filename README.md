@@ -6,7 +6,6 @@ _**By Michelle Poterek**_
 This is an application to make the gardening season seamless. This application will alert the user if the high is going to be above 90 so they can water the plants accordingly, or if the weather is going to be below 35 so they can cover them.
 
 ## Installation
-You can visit the application through this link:
 
 OR:
 In Terminal,
@@ -32,21 +31,20 @@ In Terminal,
 * A user can get a calendar notification.
 
 ## To Do list
-* Clean up response from API and remove decimal points.
-* Tuesday/Wednesday add form from user. have data be persistent.
+* Clean up response from API and remove decimal points from weather display.
 * Wednesday have moment since watered working.
 * Wednesday/Thursday design application.
 * for scaleability it might be wise to make a for loop to display temperature info. It would be a bit verbose to have 3-10 day forecast and have to set the image parameter for each one.
+
 ## Development Planning
 * Build application as presentational components initially.
 * Display API information of high and low to the user.
 * Add alert for if it should be watered or not.
 * Build form for input.
-* Add firebase.
 * Adjust click functionality for moment since watered for component.
 
 ## Program Preview
-![Preview of application](./src/images/Project.png)
+![Preview of application](./src/images/screenshot.png)
 
 ## Technologies Used
 * React
@@ -58,8 +56,6 @@ In Terminal,
 ## Support and contact details
 Please feel free to contact me directly via e-mail at poterekm@gmail.com if you have any questions, comments, ideas, or feedback. Also, I invite you to feel empowered to make any changes to this repository by forking it and making changes accordingly.
 
-## Acknowledgements
-* Thanks to the GitHub API for making dreams come true!
 
 ## License Information
 This web application is free to use under the MIT License &copy; Michelle Poterek
