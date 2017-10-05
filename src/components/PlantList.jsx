@@ -6,6 +6,9 @@ import Plant from "./Plant"
 var plantStyle = {
   backgroundColor: "rgba(255, 255, 255, .6)",
   color: "black",
+  margin: 10,
+  padding: 5,
+  textAlign: "center"
 }
 
 

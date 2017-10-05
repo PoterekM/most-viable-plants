@@ -4,8 +4,14 @@ export const defaultState = {
   plantList: [
     {
       plantName: "Philodendron",
-      plantType: "Type",
-      waterSchedule: "waterSchedule",
+      plantType: "Indoor",
+      waterSchedule: "Every 4 days",
+      id: v4(),
+    },
+    {
+      plantName: "Tomato",
+      plantType: "Outdoor",
+      waterSchedule: "Once a week",
       id: v4(),
     }
   ],

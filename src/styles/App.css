@@ -9,6 +9,7 @@ body, .app {
   background-repeat: repeat-y;
   background-image: center;
   position: center;
+  text-align: center;
 }
 
 #react-app-root {
