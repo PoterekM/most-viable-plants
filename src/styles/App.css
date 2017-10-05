@@ -5,9 +5,16 @@ body, .app {
   height: 100vh;
   min-height: 100%;
   background-color: black;
-  background-image: url("./../images/flowerPower.png")
+  background-image: url("./../images/flowerPower.png");
+  background-repeat: repeat-y;
+  background-image: center;
+  position: center;
 }
 
 #react-app-root {
-  background-color: black;
+  background-color: #0E0E0E;
+}
+
+well, .app {
+  background-color: #0E0E0E;
 }

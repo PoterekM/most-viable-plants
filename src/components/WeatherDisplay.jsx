@@ -5,6 +5,7 @@ import Cover from "./../images/coverPlants.gif"
 import Water from "./../images/wateringCan.gif"
 import Thumb from "./../images/thumbs.png"
 import {Container, Row, Col} from "react-grid-system";
+import { Well } from "react-bootstrap";
 
 const WeatherDisplay = (props) => {
   const { dispatch, weatherList, searchCity } = props;
@@ -13,6 +14,12 @@ const WeatherDisplay = (props) => {
   var imageStyle = {
     width: 150,
     height: 150,
+  }
+
+  var wellStyle = {
+    backgroundColor: "rgba(255, 255, 255, .2)",
+    textShadow: "1px 1px black",
+    color: "white",
   }
 
   let formAreaContent;
@@ -45,8 +52,9 @@ const WeatherDisplay = (props) => {
 
   } else {
     formAreaContent =
-    <div>
+    <div style={wellStyle}>
       <Container>
+
         <h1>{weatherList.searchCity}</h1>
         <Row>
           <Col sm={6}>

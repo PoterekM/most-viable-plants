@@ -8,16 +8,6 @@ import Flower from './../images/flowerPower.png'
 import styles from './../styles/App.css';
 
 function App(){
-  // var programStyles = {
-  //   backgroundImage: "url(" + Flower + ")",
-  //   position: "absolute",
-  //   top: 0,
-  //   left: 0,
-  //   width: "100%",
-  //   height: "100%",
-  //   zIndex: 9999,
-  //   backgroundRepeat: "repeatX",
-  // }
 
   return (
     <div className = {styles.app}>

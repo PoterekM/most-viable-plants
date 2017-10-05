@@ -4,6 +4,14 @@ import Plant from "./Plant"
 import { v4 } from 'uuid';
 
 
+
+var plantStyle = {
+  backgroundColor: "rgba(255, 255, 255, .6)",
+  // textShadow: "1px 1px white",
+  color: "black",
+}
+
+
 const PlantList = (props) => {
   const { dispatch, plantList } = props;
   console.log(props.plantList);
@@ -11,7 +19,7 @@ const PlantList = (props) => {
   let plantType;
   let waterSchedule;
     return (
-      <div>
+      <div style={plantStyle}>
         {props.plantList.map((plant, index) =>
           <Plant  plantName={plant.plantName}
                   plantType={plant.plantType}
