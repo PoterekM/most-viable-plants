@@ -1,7 +1,7 @@
 import { v4 } from 'uuid';
 
 export const defaultState = {
-  plantList1: [
+  plantList: [
     {
       plantName: "Philodendron",
       plantType: "Indoor",
