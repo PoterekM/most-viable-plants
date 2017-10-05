@@ -5,21 +5,22 @@ import PlantCreation from "./PlantCreation";
 import PlantList from "./PlantList";
 import { Container } from "react-grid-system";
 import Flower from './../images/flowerPower.png'
+import styles from './../styles/App.css';
 
 function App(){
-  var programStyles = {
-    backgroundImage: "url(" + Flower + ")",
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    zIndex: 9999,
-    backgroundRepeat: "repeatX",
-  }
+  // var programStyles = {
+  //   backgroundImage: "url(" + Flower + ")",
+  //   position: "absolute",
+  //   top: 0,
+  //   left: 0,
+  //   width: "100%",
+  //   height: "100%",
+  //   zIndex: 9999,
+  //   backgroundRepeat: "repeatX",
+  // }
 
   return (
-    <div style={programStyles}>
+    <div className = {styles.app}>
       <Container>
         <Header/>
         <WeatherDisplay/>
