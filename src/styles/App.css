@@ -8,15 +8,19 @@ body, .app {
   background-image: url("./../images/flowerPower.png");
   background-repeat: repeat-y;
   background-image: center;
+  background-position: center;
+  display: block;
   position: center;
   text-align: center;
-  max-width: 767px;
+  /*max-width: 767px;*/
+  /*color: white;*/
+  /*text-shadow: 1px 1px black;*/
 }
 
 #react-app-root {
   background-color: #0E0E0E;
 }
 
-well, .app {
+/*well, .app {
   background-color: #0E0E0E;
-}
+}*/
