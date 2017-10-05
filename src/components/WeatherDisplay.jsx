@@ -51,14 +51,14 @@ const WeatherDisplay = (props) => {
         <Row>
           <Col sm={6}>
             <h1>Today:</h1>
-          <h3>{weatherList.todayWeatherMax}</h3>
-        <h3>{weatherList.todayWeatherMin}</h3>
+            <h3>{weatherList.todayWeatherMax}</h3>
+            <h3>{weatherList.todayWeatherMin}</h3>
             <img style={imageStyle} src={pic}></img>
           </Col>
           <Col sm={6}>
             <h1>Tomorrow</h1>
-          <h3>{weatherList.tomorrowWeatherMax}</h3>
-        <h3>{weatherList.tomorrowWeatherMin}</h3>
+            <h3>{weatherList.tomorrowWeatherMax}</h3>
+            <h3>{weatherList.tomorrowWeatherMin}</h3>
             <img style={imageStyle} src={picTomorrow}></img>
           </Col>
         </Row>

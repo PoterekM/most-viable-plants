@@ -1,6 +1,7 @@
 import React from "react";
 import { fetchWeather } from "./../actions"
 import { connect } from "react-redux";
+import { Button } from "react-bootstrap";
 
 class WeatherLocation extends React.Component {
   constructor(props) {
@@ -8,13 +9,14 @@ class WeatherLocation extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
   handleSubmit(event) {
     event.preventDefault();
     let { _searchCity } = this.refs;
     if (!_searchCity.value.trim()) {
       return;
     }
-    this.props.dispatch(fetchWeather(_searchCity.value.trim()));
+    this.props.dispatch(fetchWeather(_searchCity.value.trim().toUpperCase()));
     _searchCity.value = ("");
   }
 
