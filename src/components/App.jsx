@@ -9,14 +9,22 @@ import styles from './../styles/App.css';
 
 function App(){
 
+  var centerStyle = {
+    maxWidth: "767px",
+    display: "block"
+  }
+
   return (
     <div className = {styles.app}>
       <Container>
+        <div style={centerStyle}>
+
         <Header/>
         <WeatherDisplay/>
         <hr/>
         <PlantCreation/>
         <PlantList/>
+        </div>
       </Container>
     </div>
   );
