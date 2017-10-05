@@ -1,5 +1,6 @@
 import constants from "./../constants";
 const { defaultState, types } = constants;
+import { v4 } from 'uuid';
 
 const plantList = (state = defaultState.plantList, action) => {
   switch (action.type) {
@@ -11,7 +12,7 @@ const plantList = (state = defaultState.plantList, action) => {
           plantName : plantName,
           plantType : plantType,
           waterSchedule : waterSchedule,
-          id: id
+          id: v4(),
         }
       ]
     default:

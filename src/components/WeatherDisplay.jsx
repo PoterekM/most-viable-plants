@@ -7,7 +7,7 @@ import Thumb from "./../images/thumbs.png"
 import {Container, Row, Col} from "react-grid-system";
 
 const WeatherDisplay = (props) => {
-  const { dispatch, weather, searchCity } = props;
+  const { dispatch, weatherList, searchCity } = props;
 
   console.log(props);
   var imageStyle = {
@@ -21,23 +21,23 @@ const WeatherDisplay = (props) => {
 
 
 
-  if ((weather.todayWeatherMin) < 32) {
+  if ((weatherList.todayWeatherMin) < 32) {
     pic = Cover;
-  } else if ((weather.todayWeatherMax) > 68){
+  } else if ((weatherList.todayWeatherMax) > 68){
     pic = Water;
   } else {
     pic = Thumb;
   }
 
-  if ((weather.tomorrowWeatherMin) < 40) {
+  if ((weatherList.tomorrowWeatherMin) < 40) {
     picTomorrow = Cover;
-  } else if ((weather.tomorrowWeatherMax) > 70){
+  } else if ((weatherList.tomorrowWeatherMax) > 70){
     picTomorrow = Water;
   } else {
     picTomorrow = Thumb;
   }
 
-  if ((weather.searchCity) === "no entry from user"){
+  if ((weatherList.searchCity) === "no entry from user"){
     formAreaContent =
       <div>
         <WeatherLocation/>
@@ -49,16 +49,16 @@ const WeatherDisplay = (props) => {
       <Container>
         <Row>
           <Col sm={6}>
-            {weather.searchCity}
+            {weatherList.searchCity}
             <h1>Today's forecast:</h1>
-            <h3>{weather.todayWeatherMax}</h3>
-            <h3>{weather.todayWeatherMin}</h3>
+          <h3>{weatherList.todayWeatherMax}</h3>
+        <h3>{weatherList.todayWeatherMin}</h3>
             <img style={imageStyle} src={pic}></img>
           </Col>
           <Col sm={6}>
             <h1>Tomorrow</h1>
-            <h3>{weather.tomorrowWeatherMax}</h3>
-            <h3>{weather.tomorrowWeatherMin}</h3>
+          <h3>{weatherList.tomorrowWeatherMax}</h3>
+        <h3>{weatherList.tomorrowWeatherMin}</h3>
             <img style={imageStyle} src={picTomorrow}></img>
           </Col>
         </Row>
@@ -76,11 +76,9 @@ const WeatherDisplay = (props) => {
 
 const mapStateToProps = state => {
   console.log(state);
-  const searchCity = searchCity;
   const weather = state;
   return {
-    weather: state.weatherList,
-
+    weatherList: state.weatherList,
   };
 };
 

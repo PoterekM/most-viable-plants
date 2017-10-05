@@ -1,29 +1,31 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import Plant from "./Plant"
+import { v4 } from 'uuid';
 
 
 const PlantList = (props) => {
-  const { dispatch, plant } = props;
-  console.log(props);
+  const { dispatch, plantList } = props;
+  console.log(props.plantList);
   let plantName;
   let plantType;
   let waterSchedule;
     return (
       <div>
-        <h1>Plant Information: </h1>
-        <h4>Name: Philodendron: {plant.plantName}</h4>
-        <h4>type: Indoor {plant.plantType}</h4>
-        <h4>Watering Schedule: every 3 days {plant.waterSchedule}</h4>
-        <button type="submit">water!</button>
+        {props.plantList.map((plant, index) =>
+          <Plant  plantName={plant.plantName}
+                  plantType={plant.plantType}
+                  waterSchedule={plant.waterSchedule}
+                  key={plant.id}/>
+        )}
       </div>
     );
   }
 
   const mapStateToProps = state => {
-    const plant = state;
+    const plantList = state;
     return {
-      plant: state,
+      plantList: state.plantList,
     };
   };
 
