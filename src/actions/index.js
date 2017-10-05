@@ -34,7 +34,11 @@ export function fetchWeather(searchCity) {
       error => console.log("There has been an error", error),
     ).then(function(json) {
       console.log(json);
-      if (json.list.length > 0) {
+      console.log(json);
+      if (json.cod === "404") {
+        alert("Sorry, we can't find any results for " + searchCity);
+      }
+      else if (json.list.length > 0) {
         const todayWeatherMin = json.list[0].temp.min;
         const todayWeatherMax = json.list[0].temp.max;
         const tomorrowWeatherMin = json.list[1].temp.min;
@@ -45,8 +49,6 @@ export function fetchWeather(searchCity) {
         console.log(tomorrowWeatherMin);
         console.log(searchCity);
         dispatch(showWeather(todayWeatherMin, todayWeatherMax, tomorrowWeatherMin, tomorrowWeatherMax, searchCity));
-      } else {
-        dispatch(showWeather("Sorry, we can't process that"));
       }
     });
   };
