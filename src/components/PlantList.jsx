@@ -11,20 +11,22 @@ var plantStyle = {
   textAlign: "center"
 }
 
-
 const PlantList = (props) => {
   const { dispatch, plantList } = props;
   console.log(props.plantList);
   let plantName;
   let plantType;
   let waterSchedule;
+  let lastWatered;
     return (
       <div style={plantStyle}>
         {props.plantList.map((plant, index) =>
           <Plant  plantName={plant.plantName}
                   plantType={plant.plantType}
                   waterSchedule={plant.waterSchedule}
+                  lastWatered={plant.lastWatered}
                   key={plant.id}/>
+
         )}
       </div>
     );

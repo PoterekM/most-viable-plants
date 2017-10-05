@@ -5,13 +5,14 @@ import { v4 } from 'uuid';
 const plantList = (state = defaultState.plantList, action) => {
   switch (action.type) {
     case 'ADD_PLANT':
-      const { plantName, plantType, waterSchedule, id } = action;
+      const { plantName, plantType, waterSchedule, lastWatered, id } = action;
       return [
         ...state,
         {
           plantName : plantName,
           plantType : plantType,
           waterSchedule : waterSchedule,
+          lastWatered: lastWatered,
           id: v4(),
         }
       ]
